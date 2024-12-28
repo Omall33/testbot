@@ -10,10 +10,10 @@ async function sendMessageToChatGPT(message) {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${Ask-proj-_Ev9cZC0gwpcjUT5M_t2QWoZ2V9TdEAqOQLD2ha34nNQtndatAFFfZhjBGG61s530bY6piV7F3T3BlbkFJOkBW8euqT81K31S7FbHUk0RUwIPn8TkAVSxJDeuN-abxByW-ZVqp6ZJaIlLk_8Ga_cpcx4ceEA}`,
+            "Authorization": `Bearer ${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}`,
         },
         body: JSON.stringify({
-            model: "gpt-4",  // Model yang digunakan (gpt-4 atau gpt-3.5)
+            model: "gpt-4o",  // Model yang digunakan (gpt-4 atau gpt-3.5)
             messages: [{ role: "user", content: message }],
         }),
     });
