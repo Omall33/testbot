@@ -1,0 +1,138 @@
+/* Reset dan pengaturan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Kontainer Chatbot */
+#chat-container {
+    width: 100%;
+    max-width: 450px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
+/* Header Chatbot */
+#chat-header {
+    background-color: #6200ea;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 15px 0 0;
+}
+
+#logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#chat-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Area untuk Pesan */
+#chat-messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.user, .ai {
+    max-width: 75%;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.user {
+    align-self: flex-end;
+    background-color: #6200ea;
+    color: white;
+}
+
+.ai {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Animasi untuk pesan */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Input dan Tombol Kirim */
+#chat-footer {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    align-items: center;
+}
+
+#user-input {
+    width: 80%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+#send-btn {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#send-btn:hover {
+    background-color: #3700b3;
+}
+
+#send-btn i {
+    font-size: 18px;
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 480px) {
+    #chat-container {
+        width: 90%;
+    }
+    #chat-header h2 {
+        font-size: 18px;
+    }
+}
